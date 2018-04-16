@@ -4,8 +4,8 @@ import re
 from scrapy.http import Request
 from urllib import parse
 
-from ArticleSpider.items import JobBoleArticleItem, ArticleItemLoader
-from ArticleSpider.utils.common import get_md5
+from JobboleSpider.items import JobBoleArticleItem, ArticleItemLoader
+from JobboleSpider.utils.common import get_md5
 from scrapy.xlib.pydispatch import dispatcher
 from scrapy import signals
 

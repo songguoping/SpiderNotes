@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import os
 
-# Scrapy settings for ArticleSpider project
+# Scrapy settings for JobboleSpider project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -10,13 +10,13 @@ import os
 #     http://scrapy.readthedocs.org/en/latest/topics/downloader-middleware.html
 #     http://scrapy.readthedocs.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = 'ArticleSpider'
+BOT_NAME = 'JobboleSpider'
 
-SPIDER_MODULES = ['ArticleSpider.spiders']
-NEWSPIDER_MODULE = 'ArticleSpider.spiders'
+SPIDER_MODULES = ['JobboleSpider.spiders']
+NEWSPIDER_MODULE = 'JobboleSpider.spiders'
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-# USER_AGENT = 'ArticleSpider (+http://www.yourdomain.com)'
+# USER_AGENT = 'JobboleSpider (+http://www.yourdomain.com)'
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = False
@@ -49,13 +49,13 @@ RANDOM_UA_TYPE = 'random'  # 表示随机设置user-agent
 # Enable or disable spider middlewares
 # See http://scrapy.readthedocs.org/en/latest/topics/spider-middleware.html
 # SPIDER_MIDDLEWARES = {
-#    'ArticleSpider.middlewares.ArticlespiderSpiderMiddleware': 543,
+#    'JobboleSpider.middlewares.ArticlespiderSpiderMiddleware': 543,
 # }
 
 # Enable or disable downloader middlewares
 # See http://scrapy.readthedocs.org/en/latest/topics/downloader-middleware.html
 # DOWNLOADER_MIDDLEWARES = {
-#    'ArticleSpider.middlewares.MyCustomDownloaderMiddleware': 543,
+#    'JobboleSpider.middlewares.MyCustomDownloaderMiddleware': 543,
 # }
 
 # Enable or disable extensions
@@ -67,19 +67,19 @@ RANDOM_UA_TYPE = 'random'  # 表示随机设置user-agent
 # Configure item pipelines
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-    # 'ArticleSpider.pipelines.ArticlespiderPipeline': 300,
-    # 'ArticleSpider.pipelines.JsonWithEncodingPipeline': 2,
-    # 'ArticleSpider.pipelines.MysqlPipeline': 2,
-    'ArticleSpider.pipelines.MysqlTwistedPipline': 2,
+    # 'JobboleSpider.pipelines.ArticlespiderPipeline': 300,
+    # 'JobboleSpider.pipelines.JsonWithEncodingPipeline': 2,
+    # 'JobboleSpider.pipelines.MysqlPipeline': 2,
+    'JobboleSpider.pipelines.MysqlTwistedPipline': 2,
 
-    # 'ArticleSpider.pipelines.JsonExporterpipleline': 2,
-    'ArticleSpider.pipelines.ArticleImagePipeline': 1,
+    # 'JobboleSpider.pipelines.JsonExporterpipleline': 2,
+    'JobboleSpider.pipelines.ArticleImagePipeline': 1,
 }
 
 DOWNLOADER_MIDDLEWARES = {
 
-    'ArticleSpider.middlewares.RandomUserAgentMiddleware': 400,
-    # 'ArticleSpider.middlewares.RandomProxyMiddleware': 500,
+    'JobboleSpider.middlewares.RandomUserAgentMiddleware': 400,
+    # 'JobboleSpider.middlewares.RandomProxyMiddleware': 500,
 }
 # 保存爬取的图片
 IMAGES_URLS_FIELD = "front_image_url"
@@ -90,7 +90,7 @@ import os
 import sys
 
 BASE_DIR = os.path.dirname(os.path.abspath(os.path.dirname(__file__)))
-sys.path.insert(0, os.path.join(BASE_DIR, 'ArticleSpider'))
+sys.path.insert(0, os.path.join(BASE_DIR, 'JobboleSpider'))
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See http://doc.scrapy.org/en/latest/topics/autothrottle.html
